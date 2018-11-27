@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
 
 version = "0.1.9-beta3"
 
@@ -25,11 +25,12 @@ android {
     }
 }
 
-def siteUrl = "https://github.com/Bilibili/MagicaSakura"
-def gitUrl = "https://github.com/Bilibili/MagicaSakura.git"
+//def siteUrl = "https://github.com/Bilibili/MagicaSakura"
+//def gitUrl = "https://github.com/Bilibili/MagicaSakura.git"
 
-group = "com.bilibili"
+//group = "com.bilibili"
 
+/*
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper paramters
@@ -64,7 +65,7 @@ install {
         }
     }
 }
-
+*/
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.sourceFiles
     classifier = 'sources'
@@ -73,7 +74,7 @@ task sourcesJar(type: Jar) {
 artifacts {
     archives sourcesJar
 }
-
+/*
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
@@ -92,7 +93,7 @@ bintray {
         publish = true
     }
 }
-
+*/
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
